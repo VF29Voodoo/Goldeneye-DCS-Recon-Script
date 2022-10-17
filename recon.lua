@@ -1,4 +1,4 @@
-
+local debug = false
 recon = {}
 local util = {}
 util.vec = {}
@@ -572,7 +572,10 @@ function recon.checkIfRecon(Object) --check if the Object is in the recon table 
 		if Object:getAmmo() == nil then
 			return true
 		else
-			return true -- Corsac: enable armed flights for testing life
+			if debug then
+				return true -- Enable armed recon flights when debugging
+			else
+				return false
 		end
 	else
 		return false
@@ -623,7 +626,6 @@ end
 
 timer.scheduleFunction(recon.removeUnusedMarks, nil, timer.getTime() + 20)
 
--- debug by Corsac
 function recon.debugCountItems(instance)
 	local count = instance:returnReconTargets()
 								
@@ -682,9 +684,10 @@ function reconEventHandler:onEvent(event)
 			end
 			
 			if recon.checkIfRecon(event.initiator) then --if recon then add command and tell player.
-				-- add debug command to count targets in flight by Corsac
-				missionCommands.addCommandForGroup(instance.groupID , "IN-FLIGHT COUNT TARGETS" , nil , recon.debugCountItems , instance)
-				-- end debug command Corsac
+				if debug then
+					-- add debug command to count targets in flight
+					missionCommands.addCommandForGroup(instance.groupID , "IN-FLIGHT COUNT TARGETS" , nil , recon.debugCountItems , instance)
+				end
 
 				trigger.action.outTextForGroup(instance.groupID,"Valid "..recon.parameters[event.initiator:getTypeName()].name.." reconnaissance flight.",20)
 				local index = missionCommands.addCommandForGroup(instance.groupID , "ENABLE RECON MODE" , nil , recon.control , instance)
