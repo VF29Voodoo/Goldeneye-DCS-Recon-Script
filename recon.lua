@@ -314,25 +314,10 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 	--	if foundItem:getGroup():getCategory() == 2 and foundItem:getCoalition() ~= instance.coa then--and string.sub(foundItem:getName(),1,6) == "Sector" then
 		--	targetList[foundItem:getName()] = foundItem
 		--if foundItem:getCoalition() ~= instance.coa then -- original sentence
-		if foundItem:getTypeName() ~= instance.coa then
-		--	targetList[foundItem:getTypeName()] = foundItem
-			targetList[foundItem:getName()] = foundItem 	
-		
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-            return true
-        end
-    end
 
-	--local ifFound = function(foundItem) --function to run when target is found in world.searchObjects
-    --    if foundItem:getCoalition() ~= instance.coa then
-    --        targetList[foundItem:getTypeName()] = foundItem
-
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-        --    return true
-        --end
-    --end
+		targetList[foundItem:getName()] = foundItem
+		return true
+	end
 
 	if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
 		world.searchObjects(Object.Category.UNIT , volume , ifFound)
@@ -341,22 +326,6 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 		--trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
 		return targetList
 	end
-	--local targetList = {}
-	--local ifFound = function(foundItem) --function to run when target is found in world.searchObjects
-    --    if foundItem:getCoalition() ~= instance.coa then
-    --        targetList[foundItem:getTypeName()] = foundItem
-
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-    --        return true
-    --    end
-    --end
-	
-	--if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
-	--	world.searchObjects(Object.Category.STATIC , volume , ifFound)
-        --trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
-	--	return targetList
-	--end
 	return {}
 end
 
