@@ -130,9 +130,10 @@ function util.freezeUnit(object)
 
 	unit.time = timer.getTime()
 
-	if unit.category == 1 then -- Make sure it's really a Unit
+	if unit.category == Object.Category.Unit then
 		unit.group = object:getGroup()
 		unit.groupID = object:getGroup():getID()
+		unit.groupCat = object:getGroupe():getCategory()
 		unit.coa = object:getCoalition()
 		unit.ammo = object:getAmmo()
 		unit.life = util.normalizeLife(object)
