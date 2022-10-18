@@ -361,9 +361,7 @@ function reconInstance:returnReconTargets() --adds targets to be added to marks.
 	local skipRecon -- should we skip that target?
 	
 	for k,v in next, self.targetList do
-		if not v.object:isExist() then --if object in list doesnt exist
-			self.targetList[k] = nil
-		else
+		if v.object:isExist() then -- make sure the object exists
 			skipRecon = nil
 			for exceptionName, bool in next, recon.targetExceptions do
 				skipRecon = string.find(string.lower(v.name), exceptionName)
@@ -404,6 +402,8 @@ function reconInstance:returnReconTargets() --adds targets to be added to marks.
 
 			end
 		end
+		-- remove the object from the target list so it can be recon-ed again later
+		self.targetList[k] = nil
 	end
 	return count
 end
