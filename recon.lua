@@ -130,10 +130,11 @@ function util.freezeUnit(object)
 
 	unit.time = timer.getTime()
 
-	if unit.category == Object.Category.Unit then
+	log.write("RECON", log.INFO, tostring(unit.category) .. " vs " .. tostring(Object.Category.UNIT))
+	if unit.category == Object.Category.UNIT then
 		unit.group = object:getGroup()
 		unit.groupID = object:getGroup():getID()
-		unit.groupCat = object:getGroupe():getCategory()
+		unit.groupCat = object:getGroup():getCategory()
 		unit.coa = object:getCoalition()
 		unit.ammo = object:getAmmo()
 		unit.life = util.normalizeLife(object)
