@@ -572,14 +572,10 @@ function recon.checkIfRecon(Object) --check if the Object is in the recon table 
 		if Object:getAmmo() == nil then
 			return true
 		else
-			if debug then
-				return true -- Enable armed recon flights when debugging
-			else
-				return false
+			return debug -- Enable armed recon flights when debugging
 		end
-	else
-		return false
 	end
+	return false
 end
 
 function recon.control(instance) --control function to enter into the captureData init method. Made so i can reference it in the addcommandforgroup function
