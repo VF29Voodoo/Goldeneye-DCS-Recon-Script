@@ -570,19 +570,19 @@ end
 
 function recon.removeUnusedMarks(args, time)
 	
-	for unitName, markNumber in next, recon.marks.blue do
-		if not Unit.getByName(unitName):isExist() then
+	for unit, markNumber in next, recon.marks.blue do
+		if not Unit.getByName(unit.name):isExist() then
 			trigger.action.removeMark(markNumber)
-			recon.marks.blue[unitName] = nil
-			recon.detectedTargets[unitName] = nil
+			recon.marks.blue[unit.name] = nil
+			recon.detectedTargets[unit.name] = nil
 		end
 	end
 	
-	for unitName, markNumber in next, recon.marks.red do
-		if not Unit.getByName(unitName):isExist() then
+	for unit, markNumber in next, recon.marks.red do
+		if not Unit.getByName(unit.name):isExist() then
 			trigger.action.removeMark(markNumber)
-			recon.marks.red[unitName] = nil
-			recon.detectedTargets[unitName] = nil
+			recon.marks.red[unit.name] = nil
+			recon.detectedTargets[unit.name] = nil
 		end
 	end
 	
