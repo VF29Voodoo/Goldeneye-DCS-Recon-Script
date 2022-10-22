@@ -1,4 +1,4 @@
-
+local debug = false
 recon = {}
 local util = {}
 util.vec = {}
@@ -130,9 +130,11 @@ function util.freezeUnit(object)
 
 	unit.time = timer.getTime()
 
-	if unit.category == 1 then -- Make sure it's really a Unit
+	log.write("RECON", log.INFO, tostring(unit.category) .. " vs " .. tostring(Object.Category.UNIT))
+	if unit.category == Object.Category.UNIT then
 		unit.group = object:getGroup()
 		unit.groupID = object:getGroup():getID()
+		unit.groupCat = object:getGroup():getCategory()
 		unit.coa = object:getCoalition()
 		unit.ammo = object:getAmmo()
 		unit.life = util.normalizeLife(object)
@@ -314,25 +316,10 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 	--	if foundItem:getGroup():getCategory() == 2 and foundItem:getCoalition() ~= instance.coa then--and string.sub(foundItem:getName(),1,6) == "Sector" then
 		--	targetList[foundItem:getName()] = foundItem
 		--if foundItem:getCoalition() ~= instance.coa then -- original sentence
-		if foundItem:getTypeName() ~= instance.coa then
-		--	targetList[foundItem:getTypeName()] = foundItem
-			targetList[foundItem:getName()] = foundItem 	
-		
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-            return true
-        end
-    end
 
-	--local ifFound = function(foundItem) --function to run when target is found in world.searchObjects
-    --    if foundItem:getCoalition() ~= instance.coa then
-    --        targetList[foundItem:getTypeName()] = foundItem
-
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-        --    return true
-        --end
-    --end
+		targetList[foundItem:getName()] = foundItem
+		return true
+	end
 
 	if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
 		world.searchObjects(Object.Category.UNIT , volume , ifFound)
@@ -341,22 +328,6 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 		--trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
 		return targetList
 	end
-	--local targetList = {}
-	--local ifFound = function(foundItem) --function to run when target is found in world.searchObjects
-    --    if foundItem:getCoalition() ~= instance.coa then
-    --        targetList[foundItem:getTypeName()] = foundItem
-
-            --trigger.action.smoke(foundItem:getPoint(), 1)
-            --trigger.action.outText(tostring(foundItem:getName()),6)
-    --        return true
-    --    end
-    --end
-	
-	--if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
-	--	world.searchObjects(Object.Category.STATIC , volume , ifFound)
-        --trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
-	--	return targetList
-	--end
 	return {}
 end
 
@@ -390,9 +361,7 @@ function reconInstance:returnReconTargets() --adds targets to be added to marks.
 	local skipRecon -- should we skip that target?
 	
 	for k,v in next, self.targetList do
-		if not v.object:isExist() then --if object in list doesnt exist
-			self.targetList[k] = nil
-		else
+		if v.object:isExist() then -- make sure the object exists
 			skipRecon = nil
 			for exceptionName, bool in next, recon.targetExceptions do
 				skipRecon = string.find(string.lower(v.name), exceptionName)
@@ -433,6 +402,8 @@ function reconInstance:returnReconTargets() --adds targets to be added to marks.
 
 			end
 		end
+		-- remove the object from the target list so it can be recon-ed again later
+		self.targetList[k] = nil
 	end
 	return count
 end
@@ -572,11 +543,10 @@ function recon.checkIfRecon(Object) --check if the Object is in the recon table 
 		if Object:getAmmo() == nil then
 			return true
 		else
-			return true -- Corsac: enable armed flights for testing life
+			return debug -- Enable armed recon flights when debugging
 		end
-	else
-		return false
 	end
+	return false
 end
 
 function recon.control(instance) --control function to enter into the captureData init method. Made so i can reference it in the addcommandforgroup function
@@ -601,19 +571,19 @@ end
 
 function recon.removeUnusedMarks(args, time)
 	
-	for unitName, markNumber in next, recon.marks.blue do
-		if not Unit.getByName(unitName):isExist() then
+	for unit, markNumber in next, recon.marks.blue do
+		if not Unit.getByName(unit.name):isExist() then
 			trigger.action.removeMark(markNumber)
-			recon.marks.blue[unitName] = nil
-			recon.detectedTargets[unitName] = nil
+			recon.marks.blue[unit.name] = nil
+			recon.detectedTargets[unit.name] = nil
 		end
 	end
 	
-	for unitName, markNumber in next, recon.marks.red do
-		if not Unit.getByName(unitName):isExist() then
+	for unit, markNumber in next, recon.marks.red do
+		if not Unit.getByName(unit.name):isExist() then
 			trigger.action.removeMark(markNumber)
-			recon.marks.red[unitName] = nil
-			recon.detectedTargets[unitName] = nil
+			recon.marks.red[unit.name] = nil
+			recon.detectedTargets[unit.name] = nil
 		end
 	end
 	
@@ -623,7 +593,6 @@ end
 
 timer.scheduleFunction(recon.removeUnusedMarks, nil, timer.getTime() + 20)
 
--- debug by Corsac
 function recon.debugCountItems(instance)
 	local count = instance:returnReconTargets()
 								
@@ -682,9 +651,10 @@ function reconEventHandler:onEvent(event)
 			end
 			
 			if recon.checkIfRecon(event.initiator) then --if recon then add command and tell player.
-				-- add debug command to count targets in flight by Corsac
-				missionCommands.addCommandForGroup(instance.groupID , "IN-FLIGHT COUNT TARGETS" , nil , recon.debugCountItems , instance)
-				-- end debug command Corsac
+				if debug then
+					-- add debug command to count targets in flight
+					missionCommands.addCommandForGroup(instance.groupID , "IN-FLIGHT COUNT TARGETS" , nil , recon.debugCountItems , instance)
+				end
 
 				trigger.action.outTextForGroup(instance.groupID,"Valid "..recon.parameters[event.initiator:getTypeName()].name.." reconnaissance flight.",20)
 				local index = missionCommands.addCommandForGroup(instance.groupID , "ENABLE RECON MODE" , nil , recon.control , instance)
