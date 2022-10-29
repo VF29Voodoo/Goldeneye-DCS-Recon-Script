@@ -1,6 +1,8 @@
 # DCS Photo Recon Script
 
-![DCStacticalreconcommu](/DCS-Recon-Script/images/DCStacticalreconcommu.PNG)
+<p align="center">
+  <img width="384" height="375" src="https://github.com/VF29Voodoo/DCS-Recon-Script/blob/main/Images/DCStacticalreconcommu.png?raw=true">
+</p>
 
 This script is derived directly from the script made by Yink for the Enigma Cold War server and available on the [Yink GitHub here.](https://github.com/Yink059/DCS-Scripts/blob/main/recon.lua)
 
@@ -28,9 +30,13 @@ The DCS Tactical Recon Community version adds the following features:
 - the addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (under implementation).
 - the possibility, for the apparatuses which were capable of it, to make of the photograph of night and if necessary to be able to make it with the simultaneous use of light bomb. (in the course of implementation)
 
+# Join the DCS Recon community
+
 If you wish to have news on the progress of the script, to participate in its evolution or to exchange with the DCS community interested in aerial reconnaissance, do not hesitate to join us on our discord server by following this link: 
 
 [Join the DCS Tactical Community Discord Group](https://discord.gg/5tM9Djdw9C)
+
+# Acknowledgment
 
 The DCS Tactical Recon Community team would like to thank Yink for creating the script and making it public.
 
