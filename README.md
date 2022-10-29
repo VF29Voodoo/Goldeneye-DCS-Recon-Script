@@ -1,6 +1,6 @@
 # DCS Photo Recon Script
 
-![DCStacticalreconcommu](DCS-Recon-Script/images/DCStacticalreconcommu.PNG)
+![DCStacticalreconcommu](/DCS-Recon-Script/images/DCStacticalreconcommu.PNG)
 
 This script is derived directly from the script made by Yink for the Enigma Cold War server and available on the [Yink GitHub here.](https://github.com/Yink059/DCS-Scripts/blob/main/recon.lua)
 
