@@ -13,6 +13,7 @@ recon.reconTypes["C-101CC"] = true
 recon.reconTypes["L-39ZA"] = true
 recon.reconTypes["F-5E-3"] = true
 recon.reconTypes["F-14A-135-GR"] = true
+recon.reconTypes["F-14B"] = true
 recon.reconTypes["MB-339A"] = true
 recon.reconTypes["F-16C_50"] = true
 
@@ -97,6 +98,16 @@ recon.parameters["F-14A-135-GR"].fov		= 60
 recon.parameters["F-14A-135-GR"].duration	= 90
 recon.parameters["F-14A-135-GR"].offset		= math.rad(70)
 recon.parameters["F-14A-135-GR"].name		= "F-14A TARPS"
+
+recon.parameters["F-14B"] = {}
+recon.parameters["F-14B"].minAlt 	= 50
+recon.parameters["F-14B"].maxAlt 	= 15000
+recon.parameters["F-14B"].maxRoll	= 10
+recon.parameters["F-14B"].maxPitch	= 15
+recon.parameters["F-14B"].fov		= 60
+recon.parameters["F-14B"].duration	= 90
+recon.parameters["F-14B"].offset	= math.rad(70)
+recon.parameters["F-14B"].name		= "F-14B TARPS"
 
 recon.parameters["MB-339A"] = {}
 recon.parameters["MB-339A"].minAlt 		= 50
