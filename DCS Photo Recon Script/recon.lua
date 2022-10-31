@@ -13,11 +13,14 @@ recon.reconTypes["C-101CC"] = true
 recon.reconTypes["L-39ZA"] = true
 recon.reconTypes["F-5E-3"] = true
 recon.reconTypes["F-14A-135-GR"] = true
+recon.reconTypes["F-14B"] = true
+recon.reconTypes["MB-339A"] = true
+recon.reconTypes["F-16C_50"] = true
 
 recon.helicopters = {}
 
-recon.helicopters["SA342Mistral"]	= true
-recon.helicopters["SA342Minigun"]	= true
+recon.helicopters["SA342Mistral"]		= true
+recon.helicopters["SA342Minigun"]		= true
 recon.helicopters["SA342L"]			= true
 recon.helicopters["SA342M"]			= true
 recon.helicopters["Mi-24P"]			= true
@@ -27,13 +30,13 @@ recon.detectedTargetsLife = {}
 
 recon.parameters = {}
 recon.parameters["MiG-21Bis"] = {}
-recon.parameters["MiG-21Bis"].minAlt 	= 100
-recon.parameters["MiG-21Bis"].maxAlt 	= 4000
-recon.parameters["MiG-21Bis"].maxRoll	= 8
-recon.parameters["MiG-21Bis"].maxPitch	= 15
+recon.parameters["MiG-21Bis"].minAlt 		= 100
+recon.parameters["MiG-21Bis"].maxAlt 		= 4000
+recon.parameters["MiG-21Bis"].maxRoll		= 8
+recon.parameters["MiG-21Bis"].maxPitch		= 15
 recon.parameters["MiG-21Bis"].fov		= 50
-recon.parameters["MiG-21Bis"].duration	= 45
-recon.parameters["MiG-21Bis"].offset	= math.rad(60)
+recon.parameters["MiG-21Bis"].duration		= 45
+recon.parameters["MiG-21Bis"].offset		= math.rad(60)
 recon.parameters["MiG-21Bis"].name		= "MiG-21R"
 
 recon.parameters["AJS37"] = {}
@@ -47,13 +50,13 @@ recon.parameters["AJS37"].offset	= math.rad(70)
 recon.parameters["AJS37"].name		= "SF 37"
 
 recon.parameters["Mirage-F1CE"] = {}
-recon.parameters["Mirage-F1CE"].minAlt 	= 50
-recon.parameters["Mirage-F1CE"].maxAlt 	= 4000
-recon.parameters["Mirage-F1CE"].maxRoll	= 8
+recon.parameters["Mirage-F1CE"].minAlt 		= 50
+recon.parameters["Mirage-F1CE"].maxAlt 		= 4000
+recon.parameters["Mirage-F1CE"].maxRoll		= 8
 recon.parameters["Mirage-F1CE"].maxPitch	= 15
 recon.parameters["Mirage-F1CE"].fov		= 60
 recon.parameters["Mirage-F1CE"].duration	= 45
-recon.parameters["Mirage-F1CE"].offset	= math.rad(70)
+recon.parameters["Mirage-F1CE"].offset		= math.rad(70)
 recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR"
 
 recon.parameters["C-101CC"] = {}
@@ -64,7 +67,7 @@ recon.parameters["C-101CC"].maxPitch	= 15
 recon.parameters["C-101CC"].fov		= 60
 recon.parameters["C-101CC"].duration	= 90
 recon.parameters["C-101CC"].offset	= math.rad(70)
-recon.parameters["C-101CC"].name		= "C-101CC Recon"
+recon.parameters["C-101CC"].name	= "C-101CC Recon"
 
 recon.parameters["L-39ZA"] = {}
 recon.parameters["L-39ZA"].minAlt 	= 50
@@ -93,8 +96,38 @@ recon.parameters["F-14A-135-GR"].maxRoll	= 10
 recon.parameters["F-14A-135-GR"].maxPitch	= 15
 recon.parameters["F-14A-135-GR"].fov		= 60
 recon.parameters["F-14A-135-GR"].duration	= 90
-recon.parameters["F-14A-135-GR"].offset	= math.rad(70)
+recon.parameters["F-14A-135-GR"].offset		= math.rad(70)
 recon.parameters["F-14A-135-GR"].name		= "F-14A TARPS"
+
+recon.parameters["F-14B"] = {}
+recon.parameters["F-14B"].minAlt 	= 50
+recon.parameters["F-14B"].maxAlt 	= 15000
+recon.parameters["F-14B"].maxRoll	= 10
+recon.parameters["F-14B"].maxPitch	= 15
+recon.parameters["F-14B"].fov		= 60
+recon.parameters["F-14B"].duration	= 90
+recon.parameters["F-14B"].offset	= math.rad(70)
+recon.parameters["F-14B"].name		= "F-14B TARPS"
+
+recon.parameters["MB-339A"] = {}
+recon.parameters["MB-339A"].minAlt 		= 50
+recon.parameters["MB-339A"].maxAlt 		= 5000
+recon.parameters["MB-339A"].maxRoll		= 8
+recon.parameters["MB-339A"].maxPitch		= 15
+recon.parameters["MB-339A"].fov			= 60
+recon.parameters["MB-339A"].duration		= 90
+recon.parameters["MB-339A"].offset		= math.rad(70)
+recon.parameters["MB-339A"].name		= "MB-339A Photo-recon"
+
+recon.parameters["F-16C_50"] = {}
+recon.parameters["F-16C_50"].minAlt 	= 50
+recon.parameters["F-16C_50"].maxAlt 	= 5000
+recon.parameters["F-16C_50"].maxRoll	= 8
+recon.parameters["F-16C_50"].maxPitch	= 15
+recon.parameters["F-16C_50"].fov	= 60
+recon.parameters["F-16C_50"].duration	= 90
+recon.parameters["F-16C_50"].offset	= math.rad(70)
+recon.parameters["F-16C_50"].name	= "F16C DB-101"
 
 recon.targetExceptions = {}
 recon.targetExceptions["blue supply"] 		= true
@@ -103,11 +136,11 @@ recon.targetExceptions["blue_00_farp"] 		= true
 recon.targetExceptions["red farp supply"] 	= true
 recon.targetExceptions["red_00_farp"] 		= true
 recon.targetExceptions["blufor farp"] 		= true
-recon.targetExceptions["blue_"] 			= true
+recon.targetExceptions["blue_"] 		= true
 recon.targetExceptions["static farp"] 		= true
 recon.targetExceptions["static windsock"] 	= true
 recon.targetExceptions["red supply"]	 	= true
-recon.targetExceptions["red_"]	 			= true
+recon.targetExceptions["red_"]	 		= true
 
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.normalizeLife(Object)
