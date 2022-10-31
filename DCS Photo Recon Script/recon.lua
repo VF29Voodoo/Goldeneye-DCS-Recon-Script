@@ -130,6 +130,31 @@ recon.targetExceptions["static farp"] 		= true
 recon.targetExceptions["static windsock"] 	= true
 recon.targetExceptions["red supply"]	 	= true
 recon.targetExceptions["red_"]	 		= true
+recon.targetExceptions["scenery_"]	 			= true
+recon.targetExceptions["scenery_BLK_LIGHT_POLE"]	= true
+recon.targetExceptions["scenery_home1_c"]			= true
+recon.targetExceptions["scenery_home2_a"]			= true
+recon.targetExceptions["scenery_home2_c"]			= true
+recon.targetExceptions["scenery_home1_b"]			= true
+recon.targetExceptions["scenery_tr_budka_new"]		= true
+recon.targetExceptions["scenery_kotelnaya_a_new"]	= true
+recon.targetExceptions["scenery_home1ug_a"]			= true
+recon.targetExceptions["scenery_home1ug_b"]			= true
+recon.targetExceptions["scenery_dom2a"]				= true
+recon.targetExceptions["scenery_domik1c"]			= true
+recon.targetExceptions["scenery_domik1a_new"]		= true
+recon.targetExceptions["scenery_domik1b_new"]		= true
+recon.targetExceptions["scenery_DIRECTIONAL_APPROACH_LIGHTS_RED"]			= true
+recon.targetExceptions["scenery_IN_PAVEMENT_BI_DERECTIONAL_WHITE_WHITE"]	= true
+recon.targetExceptions["scenery_TAXIWAY_LIGHT_BLUE"]		= true
+recon.targetExceptions["scenery_UKRYTIE"]			= true
+recon.targetExceptions["scenery_OHR-VYSHKA"]		= true
+recon.targetExceptions["scenery_magazin_new"]		= true
+recon.targetExceptions["scenery_klub_b"]			= true
+recon.targetExceptions["scenery sklad_new"]			= true
+recon.targetExceptions["scenery f_sklad"]			= true
+recon.targetExceptions["scenery korpus_d"]			= true
+
 
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.normalizeLife(Object)
