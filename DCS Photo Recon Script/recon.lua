@@ -1,4 +1,4 @@
-local debug = false
+local debug = true
 recon = {}
 local util = {}
 util.vec = {}
