@@ -269,6 +269,24 @@ function util.getPitch(Object) --mist
 		return math.asin(unitpos.x.y)
 	end
 end
+
+function util.life2text(life) -- Convert life between 0 and 100 to a textual representation
+	if life == nil then
+		return "Undefined"
+	elseif life > 80 then
+		return "Intact"
+	elseif life > 60 then
+		return "Damaged"
+	elseif life > 40 then
+		return "Severely damaged"
+	elseif life > 20 then
+		return "Critical"
+	elseif life > 0 then
+		return "Destroyed"
+	else
+		return "Undefined"
+	end
+end
 -----------------------------------------------------------------------------------------------------------------recon object Definitions
 reconInstance = {}
 recon.instances = {}
@@ -477,7 +495,7 @@ function recon.redOutMark(unit)
 	outString = outString .. tostring(util.round(lat,4))..", " .. tostring(util.round(lon,4))
 	outString = outString .. " | ".. tostring(util.round(pressure/100,2)) .." " .. tostring(util.round(29.92 * (pressure/100) / 1013.25,2))
 	outString = outString .. "\nTYPE: " .. unit.type
-	outString = outString .. " LIFE: " .. tostring(unit.life)  .. " "
+	outString = outString .. " STATUS: " .. util.life2text(unit.life)  .. " "
 
 	trigger.action.markToCoalition(recon.redMarkCount, outString , unit.point , 1 , true)
 	recon.marks.red[unit.name] = recon.redMarkCount
@@ -493,7 +511,7 @@ function recon.blueOutMark(unit)
 	outString = outString .. tostring(util.round(lat,4))..", " .. tostring(util.round(lon,4))
 	outString = outString .. " | ".. tostring(util.round(pressure/100,2)) .." " .. tostring(util.round(29.92 * (pressure/100) / 1013.25,2))
 	outString = outString .. "\nTYPE: " .. unit.type
-	outString = outString .. " LIFE: " .. tostring(unit.life)  .. " "
+	outString = outString .. " STATUS: " .. util.life2text(unit.life)  .. " "
 
 	trigger.action.markToCoalition(recon.blueMarkCount, outString , unit.point , 2 , true)
 	recon.marks.blue[unit.name] = recon.blueMarkCount
