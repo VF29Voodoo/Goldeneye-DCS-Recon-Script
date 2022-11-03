@@ -142,6 +142,18 @@ recon.targetExceptions["static windsock"] 	= true
 recon.targetExceptions["red supply"]	 	= true
 recon.targetExceptions["red_"]	 		= true
 
+-- Matching objects not added to the recon list at all
+recon.captureExceptions = {}
+recon.captureExceptions["BLK_LIGHT_POLE"]	= true
+recon.captureExceptions["home1_"]		= true
+recon.captureExceptions["home1ug_"]		= true
+recon.captureExceptions["home1ug_"]		= true
+recon.captureExceptions["school_"]		= true
+recon.captureExceptions["GARAGE_"]		= true
+recon.captureExceptions["TAXIWAY_LIGHT"]	= true
+recon.captureExceptions["DIRECTIONAL_APPROACH_LIGHTS_"]	= true
+recon.captureExceptions["IN_PAVEMENT_BI_DERECTIONAL_WHITE_WHITE"]	= true
+
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.normalizeLife(Object)
    if Object == nil then return end
@@ -349,6 +361,13 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 	--	if foundItem:getGroup():getCategory() == 2 and foundItem:getCoalition() ~= instance.coa then--and string.sub(foundItem:getName(),1,6) == "Sector" then
 		--	targetList[foundItem:getName()] = foundItem
 		--if foundItem:getCoalition() ~= instance.coa then -- original sentence
+		log.write("RECON", log.INFO, "Found: " .. foundItem:getTypeName() .. " - " .. foundItem:getName())
+		for ExceptionName, bool in next, recon.captureExceptions do
+			if string.find(string.lower(foundItem:getTypeName()), string.lower(ExceptionName)) then
+				log.write("RECON", log.INFO, "skipped")
+				return false
+			end
+		end
 
 		targetList[foundItem:getName()] = foundItem
 		return true
@@ -357,7 +376,7 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 	if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
 		world.searchObjects(Object.Category.UNIT , volume , ifFound)
 		world.searchObjects(Object.Category.STATIC , volume , ifFound)
-		--world.searchObjects(Object.Category.SCENERY , volume , ifFound)
+		world.searchObjects(Object.Category.SCENERY , volume , ifFound)
 		--trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
 		return targetList
 	end
