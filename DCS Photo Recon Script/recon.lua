@@ -153,6 +153,25 @@ recon.captureExceptions["GARAGE_"]		= true
 recon.captureExceptions["TAXIWAY_LIGHT"]	= true
 recon.captureExceptions["DIRECTIONAL_APPROACH_LIGHTS_"]	= true
 recon.captureExceptions["IN_PAVEMENT_BI_DERECTIONAL_WHITE_WHITE"]	= true
+recon.captureExceptions["korpus_b1 STATUS_"]		= true
+recon.captureExceptions["sklad_new_"]		= true
+recon.captureExceptions["korpus_b_"]		= true
+recon.captureExceptions["dom2c_new_"]		= true
+recon.captureExceptions["ceh_a_"]		= true
+recon.captureExceptions["ceh_b_"]		= true
+recon.captureExceptions["kotelnaya_b_"]		= true
+recon.captureExceptions["d_sad_a_"]		= true
+recon.captureExceptions["home53_st_"]		= true
+recon.captureExceptions["home52_hr_"]		= true
+recon.captureExceptions["uniwersam_a_new_"]		= true
+recon.captureExceptions["kazarma2_"]		= true
+recon.captureExceptions["home16_twin_"]		= true
+recon.captureExceptions["magazin_new_"]		= true
+recon.captureExceptions["klub_a_"]		= true
+recon.captureExceptions["tr_budka_new_"]		= true
+recon.captureExceptions["home9a_"]		= true
+recon.captureExceptions["ceh_ang_a_new_"]		= true
+recon.captureExceptions["home2_c_"]		= true
 
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.debug(text)
