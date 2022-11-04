@@ -1,4 +1,4 @@
-local debug = false
+local debug = true
 recon = {}
 local util = {}
 util.vec = {}
@@ -143,6 +143,12 @@ recon.targetExceptions["red supply"]	 	= true
 recon.targetExceptions["red_"]	 		= true
 
 ------------------------------------------------------------------------------------------------------------------------util Definitions
+function util.debug(text)
+	if debug then
+		log.write("RECON", log.INFO, text)
+	end
+end
+
 function util.normalizeLife(Object)
    if Object == nil then return end
    if Object:getCategory() == 1 then
@@ -152,7 +158,7 @@ end
 
 -- freeze an unit properties in a new table
 function util.freezeUnit(object)
-	log.write("RECON", log.DEBUG, "util.freezeUnit(" .. object:getTypeName() .. "-" .. object:getName() .. ")")
+	util.debug("util.freezeUnit(" .. object:getTypeName() .. "-" .. object:getName() .. ")")
 	local unit = {}
 
 	unit.object = object
@@ -163,7 +169,7 @@ function util.freezeUnit(object)
 
 	unit.time = timer.getTime()
 
-	log.write("RECON", log.INFO, tostring(unit.category) .. " vs " .. tostring(Object.Category.UNIT))
+	util.debug(tostring(unit.category) .. " vs " .. tostring(Object.Category.UNIT))
 	if unit.category == Object.Category.UNIT then
 		unit.group = object:getGroup()
 		unit.groupID = object:getGroup():getID()
@@ -408,14 +414,14 @@ function reconInstance:returnReconTargets() --adds targets to be added to marks.
 					count = count + 1
 					recon.outMarkTable[self.coa](v)
 					recon.detectedTargets[v.name] = v
-					log.write("RECON", log.INFO, "Target " .. v.type .. " " .. v.name .. " added to the recon list")
+					util.debug("Target " .. v.type .. " " .. v.name .. " added to the recon list")
 				else -- we already detected that target, check life and maybe remove the earlier marker
-					log.write("RECON", log.INFO, "Target " .. v.type .. " ".. v.name .. " already in recon list, checking life")
+					util.debug("Target " .. v.type .. " ".. v.name .. " already in recon list, checking life")
 					local pre_life = recon.detectedTargets[v.name].life
 					local cur_life = v.life
-					log.write("RECON", log.INFO, "Target " .. v.type .. " " .. v.name .. ": pre_life = " .. tostring(pre_life) .. " cur_life = " .. tostring(cur_life))
+					util.debug("Target " .. v.type .. " " .. v.name .. ": pre_life = " .. tostring(pre_life) .. " cur_life = " .. tostring(cur_life))
 					if pre_life ~= cur_life then
-						log.write("RECON", log.INFO, "Target " .. v.type .. " " .. v.name .. ": life changed, updating mark")
+						util.debug("Target " .. v.type .. " " .. v.name .. ": life changed, updating mark")
 						-- remove current marks
 						local markNumber = nil
 						if recon.marks.blue[v.name] ~= nil then
