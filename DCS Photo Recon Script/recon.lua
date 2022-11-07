@@ -172,6 +172,13 @@ recon.captureExceptions["tr_budka_new_"]		= true
 recon.captureExceptions["home9a_"]		= true
 recon.captureExceptions["ceh_ang_a_new_"]		= true
 recon.captureExceptions["home2_c_"]		= true
+recon.captureExceptions["ceh_ang_a_new_"]		= true
+recon.captureExceptions["korpus_a1_"]		= true
+recon.captureExceptions["korpus_b1_"]		= true
+recon.captureExceptions["kotelnaya_b_"]		= true
+recon.captureExceptions["korpus_a_"]		= true
+recon.captureExceptions["korpus_b_"]		= true
+recon.captureExceptions["tr_budka_new_"]		= true
 
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.debug(text)
