@@ -21,14 +21,14 @@ The initial script allows :
 
 The DCS Tactical Recon Community version adds the following features:
 
-- the addition of the F-14A and F-5E in the available platforms
-- the indication of the life of the unit in % on the marker of the Map F10 in order to simulate the analysis of the state of the target by the photo interpreters.
-- the possibility to take a picture of an already detected unit in order to observe the evolution of its health after an attack and the evolution of its position. This feature allows to simulate the possibility to perform a BDA after a strike, a very important mission of photo reconnaissance units.
-- the possibility to detect destroyed units (under implementation). This feature also contributes to the possibility of performing a BDA after a strike.
-- the possibility to detect static objects like bridges, hangars or various structures from the map or added in the mission editor.
-- the possibility for some aircraft to fly armed as it was the case for the F-14 and the Mirage F1 for example. (In progress).
-- the addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (under implementation).
-- the possibility, for the apparatuses which were capable of it, to make of the photograph of night and if necessary to be able to make it with the simultaneous use of light bomb. (in the course of implementation)
+- The addition of the F-14A and F-5E in the available platforms
+- The indication of the status of the unit on the marker of the F10 card in order to simulate the analysis of the status of the target by the photo-interpreters.
+- The possibility to take a picture of an already detected unit in order to observe the evolution of its health after an attack and the evolution of its position. This feature allows to simulate the possibility to perform a BDA after a strike, a very important mission of photo reconnaissance units.
+- The possibility to detect destroyed units (under implementation). This feature also contributes to the possibility of performing a BDA after a strike.
+- The possibility to detect static objects like bridges, hangars or various structures from the map or added in the mission editor.
+- The possibility for some aircraft to fly armed as it was the case for the F-14 and the Mirage F1 for example. (In progress).
+- The addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (under implementation).
+- The possibility, for the planes which were capable of it, to do photo at night and if necessary to be able to do it with the simultaneous use of light bomb. (in the course of implementation)
 
 # How to use the Script
 
