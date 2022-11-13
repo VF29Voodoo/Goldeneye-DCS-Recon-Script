@@ -78,6 +78,12 @@ And now you just have to plan a raid to destroy these units! =)
 
 We wish you good hunting for future reconnaissance flights!
 
+# What's next:
+
+You can access the road map here : [Photo Recon Script Project](https://github.com/users/VF29Voodoo/projects/1/views/1)
+
+It gives you an idea of what is going on. We welcome any suggestions and help with coding!
+
 # Join the DCS Recon community
 
 If you wish to have news on the progress of the script, to participate in its evolution or to exchange with the DCS community interested in aerial reconnaissance, do not hesitate to join us on our discord server by following this link: 
