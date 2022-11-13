@@ -66,7 +66,7 @@ We recommend using the satellite view to help you to analyze the data and to fin
 
 Once you click on the markers you can see the data received by your photo interpreter:
 - The position of the unit
-- The QFE
+- The QFE (HPA and in HG)
 - The type of the detected unit
 - Its status: Undefined, No damage, Slightly damaged, Damaged, Major damage, Destroyed.
 
