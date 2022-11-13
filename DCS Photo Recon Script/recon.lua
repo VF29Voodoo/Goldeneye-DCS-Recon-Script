@@ -317,14 +317,14 @@ end
 function util.life2text(life) -- Convert life between 0 and 100 to a textual representation
 	if life == nil then
 		return "Undefined"
-	elseif life > 80 then
-		return "Intact"
-	elseif life > 60 then
-		return "Damaged"
+	elseif life > 90 then
+		return "No damage"
+	elseif life > 70 then
+		return "Slightly damage"
 	elseif life > 40 then
-		return "Severely damaged"
+		return "Damaged"
 	elseif life > 20 then
-		return "Critical"
+		return "Major damage"
 	elseif life > 0 then
 		return "Destroyed"
 	else
