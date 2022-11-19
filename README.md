@@ -26,9 +26,9 @@ The DCS Tactical Recon Community version adds the following features:
 - The possibility to take a picture of an already detected unit in order to observe the evolution of its health after an attack and the evolution of its position. This feature allows to simulate the possibility to perform a BDA after a strike, a very important mission of photo reconnaissance units.
 - The possibility to detect destroyed units (under implementation). This feature also contributes to the possibility of performing a BDA after a strike.
 - The possibility to detect static objects like bridges, hangars or various structures from the map or added in the mission editor.
-- The possibility for some aircraft to fly armed as it was the case for the F-14 and the Mirage F1 for example. (In progress).
-- The addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (under implementation).
-- The possibility, for the planes which were capable of it, to do photo at night and if necessary to be able to do it with the simultaneous use of light bomb. (in the course of implementation)
+- The possibility for some aircraft to fly armed as it was the case for the F-14 and the Mirage F1 for example. (WIP).
+- The addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (WIP).
+- The possibility, for the planes which were capable of it, to do photo at night and if necessary to be able to do it with the simultaneous use of light bomb. (WIP)
 
 # How to use the Script
 
