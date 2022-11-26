@@ -50,13 +50,13 @@ recon.parameters["AJS37"].offset	= math.rad(70)
 recon.parameters["AJS37"].name		= "SF 37"
 
 recon.parameters["Mirage-F1CE"] = {}
-recon.parameters["Mirage-F1CE"].minAlt 		= 50
-recon.parameters["Mirage-F1CE"].maxAlt 		= 4000
+recon.parameters["Mirage-F1CE"].minAlt 		= 100
+recon.parameters["Mirage-F1CE"].maxAlt 		= 5000
 recon.parameters["Mirage-F1CE"].maxRoll		= 8
 recon.parameters["Mirage-F1CE"].maxPitch	= 15
-recon.parameters["Mirage-F1CE"].fov		= 60
-recon.parameters["Mirage-F1CE"].duration	= 45
-recon.parameters["Mirage-F1CE"].offset		= math.rad(70)
+recon.parameters["Mirage-F1CE"].fov		= 80
+recon.parameters["Mirage-F1CE"].duration	= 280
+recon.parameters["Mirage-F1CE"].offset		= math.rad(90)
 recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR"
 
 recon.parameters["C-101CC"] = {}
