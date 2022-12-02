@@ -80,17 +80,17 @@ We wish you good hunting for future reconnaissance flights!
 
 # Aircraft parameters:
 
-|Aircraft|MinAlt|MaxAlt|MaxRoll|MaxPitch|FOV|Film duration|Offset|
-|:------:|:----:|:----:|:-----:|:------:|:-:|:-----------:|:----:|
-|MIG-21  |1600ft |16400ft|8°     |15°     |104°|140sec        |90°   |
-|AJS-37  |100ft |4000ft|8°     |15°     |30°|45sec        |60°   |
-|Mirage F1  |100ft |5000ft|8°     |15°     |80°|200sec        |90°   |
-|L-39ZA |1600ft |16400ft|8°     |15°     |61°|140sec        |70°   |
-|F-5E  |2500ft |25000ft|8°     |15°     |60°|65sec        |70°   |
-|F-14A  |750ft |5000ft|10°     |15°     |41°|400sec        |85°   |
-|F-14B |500ft |25000ft|10°     |15°     |90°|80sec        |90°   |
-|MB-339A  |50ft |5000ft|8°     |15°     |90°|350sec        |80°   |
-|F-16C |10000ft |80000ft|8°     |15°     |40°|600sec        |90°   |
+|Aircraft|MinAlt|MaxAlt|MaxRoll|MaxPitch|FOV|Film duration|Offset|POD/Camera|Optimal mission profil|
+|:------:|:----:|:----:|:-----:|:------:|:-:|:-----------:|:----:|:----:|:----:|
+|MIG-21  |1600ft |16400ft|10°     |15°     |104°|140sec        |90°   |Day Recce pod with AShAFA-5|Low Altitude / Area Research|
+|AJS-37  |100ft |4000ft|10°     |15°     |90°|45sec        |60°   | / |Low Altitude|
+|Mirage F1  |100ft |5000ft|10°     |15°     |80°|280sec        |90°   |Omera 40 panoramic camera|Low Altitude / Area Research|
+|L-39ZA |1600ft |16400ft|8°     |15°     |61°|140sec        |70°   |PFK-5 recce pod with AFA-39 camera|Medium Altitude / Axis Recon|
+|F-5E  |2500ft |25000ft|15°     |15°     |60°|65sec        |70°   |KA-95 "Tigereye" nose recon camera|High Altitude / Known target|
+|F-14A  |750ft |5000ft|10°     |20°     |41°|400sec        |85°   |KS-87D camera|Low Altitude / Axis Recon|
+|F-14B |500ft |25000ft|10°     |20°     |90°|80sec        |90°   |KA-99A panoramic camera|High Altitude / Known target|
+|MB-339A  |50ft |5000ft|8°     |15°     |90°|350sec        |80°   |F-95 recon pod|Low Altitude / Area Research|
+|F-16C |10000ft |80000ft|30°     |20°     |40°|600sec        |90°   |DB-110 recon pod|High Altitude / Area Research|
 
 # What's next:
 
