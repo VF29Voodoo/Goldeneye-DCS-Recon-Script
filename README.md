@@ -1,4 +1,4 @@
-# DCS Photo Recon Script
+# Goldeneye - DCS Photo Recon Script
 
 <p align="center">
   <img width="384" height="375" src="https://github.com/VF29Voodoo/DCS-Recon-Script/blob/main/Images/DCStacticalreconcommu.png?raw=true">
