@@ -1,4 +1,4 @@
-# Goldeneye - DCS Photo Recon Script
+# GOLDENEYE - DCS Photo Recon Script
 
 <p align="center">
   <img width="384" height="375" src="https://github.com/VF29Voodoo/DCS-Recon-Script/blob/main/Images/DCStacticalreconcommu.png?raw=true">
@@ -17,14 +17,14 @@ The initial script allows :
 - the detection of units of the opposing camp according to parameters specific to each aircraft.
 - processing of "photos" immediately after the aircraft has landed, with markers appearing on the F10 map indicating the type of unit detected, its position and altitude.
 
-# DCS Tactical Recon Community Script Features:
+# GOLDENEYE - DCS Tactical Recon Community Script Features:
 
 The DCS Tactical Recon Community version adds the following features:
 
-- The addition of the F-14A and F-5E in the available platforms
-- The indication of the status of the unit on the marker of the F10 card in order to simulate the analysis of the status of the target by the photo-interpreters.
+- The addition of the F-14A/B, F-5E and MB-339 in the available platforms
+- The indication of the status of the detected units on the marker of the F10 map in order to simulate the analysis of the status of the target by the photo-interpreters.
 - The possibility to take a picture of an already detected unit in order to observe the evolution of its health after an attack and the evolution of its position. This feature allows to simulate the possibility to perform a BDA after a strike, a very important mission of photo reconnaissance units.
-- The possibility to detect destroyed units (under implementation). This feature also contributes to the possibility of performing a BDA after a strike.
+- The possibility to detect destroyed units (WIP). This feature also contributes to the possibility of performing a BDA after a strike.
 - The possibility to detect static objects like bridges, hangars or various structures from the map or added in the mission editor.
 - The possibility for some aircraft to fly armed as it was the case for the F-14 and the Mirage F1 for example. (WIP).
 - The addition of additional cameras (panoramic camera, oblique camera, long focal length camera) (WIP).
@@ -62,6 +62,8 @@ You can then go to the F10 view to take a closer look at the markers.
 
 ![](https://github.com/VF29Voodoo/DCS-Recon-Script/blob/develop/GIF/label_recon%20gif.gif)
 
+# Results analysis
+
 We recommend using the satellite view to help you to analyze the data and to find vehicles among the hangars or military infrastructures that you can find.
 
 Once you click on the markers you can see the data received by your photo interpreter:
@@ -78,12 +80,19 @@ And now you just have to plan a raid to destroy these units! =)
 
 We wish you good hunting for future reconnaissance flights!
 
+*Please note : The photo interpreter will place a marker on military units, military buildings and vehicles as well as hangars, bridges and other strategic objects that may be present on the maps. This may require some research to extract the important information depending on your objective.
+If you wish to have only military units marked you can remove the detection of static units and/or objects from the map by placing two "--" in front of the following lines, like this :*
+
+![alt text](https://github.com/VF29Voodoo/DCS-Recon-Script/blob/develop/Images/static_scenery.JPG)
+
+![alt text](https://github.com/VF29Voodoo/DCS-Recon-Script/blob/develop/Images/static_scenery2.JPG) 
+
 # Aircraft parameters:
 
 |Aircraft|MinAlt|MaxAlt|MaxRoll|MaxPitch|FOV|Film duration|Offset|POD/Camera|Optimal mission profil|
 |:------:|:----:|:----:|:-----:|:------:|:-:|:-----------:|:----:|:----:|:----:|
 |MIG-21  |1600ft |16400ft|10°     |15°     |104°|140sec        |90°   |Day Recce pod with AShAFA-5|Low Altitude / Area Research|
-|AJS-37  |100ft |4000ft|10°     |15°     |90°|45sec        |60°   | / |Low Altitude|
+|AJS-37  |100ft |4000ft|10°     |15°     |90°|180sec        |60°   | SKa24 nose camera |Low Altitude|
 |Mirage F1  |100ft |5000ft|10°     |15°     |80°|280sec        |90°   |Omera 40 panoramic camera|Low Altitude / Area Research|
 |L-39ZA |1600ft |16400ft|8°     |15°     |61°|140sec        |70°   |PFK-5 recce pod with AFA-39 camera|Medium Altitude / Axis Recon|
 |F-5E  |2500ft |25000ft|15°     |15°     |60°|65sec        |70°   |KA-95 "Tigereye" nose recon camera|High Altitude / Known target|
