@@ -39,13 +39,13 @@ recon.parameters["MiG-21Bis"].offset		= math.rad(90)
 recon.parameters["MiG-21Bis"].name		= "MiG-21R"
 
 recon.parameters["AJS37"] = {}
-recon.parameters["AJS37"].minAlt 		= 300
-recon.parameters["AJS37"].maxAlt 		= 20000
+recon.parameters["AJS37"].minAlt 		= 50
+recon.parameters["AJS37"].maxAlt 		= 5000
 recon.parameters["AJS37"].maxRoll		= 10
 recon.parameters["AJS37"].maxPitch		= 15
 recon.parameters["AJS37"].fov			= 90
-recon.parameters["AJS37"].duration		= 45
-recon.parameters["AJS37"].offset		= math.rad(70)
+recon.parameters["AJS37"].duration		= 120
+recon.parameters["AJS37"].offset		= math.rad(60)
 recon.parameters["AJS37"].name			= "SF 37"
 
 recon.parameters["Mirage-F1CE"] = {}
