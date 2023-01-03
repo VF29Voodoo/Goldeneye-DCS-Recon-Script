@@ -35,7 +35,7 @@ recon.parameters["MiG-21Bis"].maxRoll		= 10
 recon.parameters["MiG-21Bis"].maxPitch		= 15
 recon.parameters["MiG-21Bis"].fov		= 104
 recon.parameters["MiG-21Bis"].duration		= 140
-recon.parameters["MiG-21Bis"].offset		= math.rad(90)
+recon.parameters["MiG-21Bis"].offset		= math.rad(85)
 recon.parameters["MiG-21Bis"].name		= "MiG-21R"
 
 recon.parameters["AJS37"] = {}
@@ -55,7 +55,7 @@ recon.parameters["Mirage-F1CE"].maxRoll		= 10
 recon.parameters["Mirage-F1CE"].maxPitch	= 15
 recon.parameters["Mirage-F1CE"].fov		= 80
 recon.parameters["Mirage-F1CE"].duration	= 280
-recon.parameters["Mirage-F1CE"].offset		= math.rad(90)
+recon.parameters["Mirage-F1CE"].offset		= math.rad(85)
 recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR"
 
 recon.parameters["L-39ZA"] = {}
@@ -95,7 +95,7 @@ recon.parameters["F-14B"].maxRoll		= 10
 recon.parameters["F-14B"].maxPitch		= 20
 recon.parameters["F-14B"].fov			= 90
 recon.parameters["F-14B"].duration		= 80
-recon.parameters["F-14B"].offset		= math.rad(90)
+recon.parameters["F-14B"].offset		= math.rad(85)
 recon.parameters["F-14B"].name			= "F-14B TARPS KA-99A"
 
 recon.parameters["MB-339A"] = {}
@@ -115,7 +115,7 @@ recon.parameters["F-16C_50"].maxRoll		= 30
 recon.parameters["F-16C_50"].maxPitch		= 20
 recon.parameters["F-16C_50"].fov		= 40
 recon.parameters["F-16C_50"].duration		= 600
-recon.parameters["F-16C_50"].offset		= math.rad(90)
+recon.parameters["F-16C_50"].offset		= math.rad(85)
 recon.parameters["F-16C_50"].name		= "F16C DB-101"
 
 recon.targetExceptions = {}
