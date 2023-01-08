@@ -1,4 +1,4 @@
-local debug = true
+local debug = false
 recon = {}
 local util = {}
 util.vec = {}
@@ -35,7 +35,7 @@ recon.parameters["MiG-21Bis"].maxRoll		= 10
 recon.parameters["MiG-21Bis"].maxPitch		= 15
 recon.parameters["MiG-21Bis"].fov		= 104
 recon.parameters["MiG-21Bis"].duration		= 140
-recon.parameters["MiG-21Bis"].offset		= math.rad(85)
+recon.parameters["MiG-21Bis"].offset		= math.rad(70)
 recon.parameters["MiG-21Bis"].name		= "MiG-21R"
 
 recon.parameters["AJS37"] = {}
@@ -43,9 +43,9 @@ recon.parameters["AJS37"].minAlt 		= 50
 recon.parameters["AJS37"].maxAlt 		= 5000
 recon.parameters["AJS37"].maxRoll		= 10
 recon.parameters["AJS37"].maxPitch		= 15
-recon.parameters["AJS37"].fov			= 90
+recon.parameters["AJS37"].fov			= 60
 recon.parameters["AJS37"].duration		= 120
-recon.parameters["AJS37"].offset		= math.rad(60)
+recon.parameters["AJS37"].offset		= math.rad(70)
 recon.parameters["AJS37"].name			= "SF 37"
 
 recon.parameters["Mirage-F1CE"] = {}
@@ -55,7 +55,7 @@ recon.parameters["Mirage-F1CE"].maxRoll		= 10
 recon.parameters["Mirage-F1CE"].maxPitch	= 15
 recon.parameters["Mirage-F1CE"].fov		= 80
 recon.parameters["Mirage-F1CE"].duration	= 280
-recon.parameters["Mirage-F1CE"].offset		= math.rad(85)
+recon.parameters["Mirage-F1CE"].offset		= math.rad(10)
 recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR"
 
 recon.parameters["L-39ZA"] = {}
@@ -95,7 +95,7 @@ recon.parameters["F-14B"].maxRoll		= 10
 recon.parameters["F-14B"].maxPitch		= 20
 recon.parameters["F-14B"].fov			= 90
 recon.parameters["F-14B"].duration		= 80
-recon.parameters["F-14B"].offset		= math.rad(85)
+recon.parameters["F-14B"].offset		= math.rad(10)
 recon.parameters["F-14B"].name			= "F-14B TARPS KA-99A"
 
 recon.parameters["MB-339A"] = {}
@@ -109,13 +109,13 @@ recon.parameters["MB-339A"].offset		= math.rad(80)
 recon.parameters["MB-339A"].name		= "MB-339A Photo-recon"
 
 recon.parameters["F-16C_50"] = {}
-recon.parameters["F-16C_50"].minAlt 		= 10000
-recon.parameters["F-16C_50"].maxAlt 		= 80000
+recon.parameters["F-16C_50"].minAlt 		= 1000
+recon.parameters["F-16C_50"].maxAlt 		= 20000
 recon.parameters["F-16C_50"].maxRoll		= 30
 recon.parameters["F-16C_50"].maxPitch		= 20
 recon.parameters["F-16C_50"].fov		= 40
 recon.parameters["F-16C_50"].duration		= 600
-recon.parameters["F-16C_50"].offset		= math.rad(85)
+recon.parameters["F-16C_50"].offset		= math.rad(0)
 recon.parameters["F-16C_50"].name		= "F16C DB-101"
 
 recon.targetExceptions = {}
@@ -161,14 +161,40 @@ recon.captureExceptions["tr_budka_new_"]		= true
 recon.captureExceptions["home9a_"]		= true
 recon.captureExceptions["ceh_ang_a_new_"]		= true
 recon.captureExceptions["home2_c_"]		= true
+recon.captureExceptions["home3_e_"]		= true
+recon.captureExceptions["home16_twin_"]		= true
 recon.captureExceptions["ceh_ang_a_new_"]		= true
 recon.captureExceptions["korpus_a1_"]		= true
 recon.captureExceptions["korpus_b1_"]		= true
 recon.captureExceptions["kotelnaya_b_"]		= true
 recon.captureExceptions["korpus_a_"]		= true
 recon.captureExceptions["korpus_b_"]		= true
-recon.captureExceptions["tr_budka_new_"]		= true
-
+recon.captureExceptions["AFG_CITY_HOUSE_02"]		= true
+recon.captureExceptions["AFG_CITY_HOUSE_01"]		= true
+recon.captureExceptions["BLOCK_WALL STATUS"]		= true
+recon.captureExceptions["ARABIAN_BLOCK_BUILDING_06"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_1"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_2"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_3"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_4"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_5"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_6"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_7"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_8"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_9"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_10"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_11"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_12"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_13"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_14"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_15"]		= true
+recon.captureExceptions["POWER_TRANS_LINE_03"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_03"]		= true
+recon.captureExceptions["AFG_CITY_HOUSE_03"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_05"]		= true
+recon.captureExceptions["NEVADA_VEGAS_HOUSE_02"]		= true
+recon.captureExceptions["AFG_CITY_HOUSE_05"]		= true
+recon.captureExceptions["AFGHAN_HOUSE_16"]		= true
 ------------------------------------------------------------------------------------------------------------------------util Definitions
 function util.debug(text)
 	if debug then
