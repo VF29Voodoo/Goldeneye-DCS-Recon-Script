@@ -7,7 +7,7 @@ recon.lists = {}
 recon.reconTypes = {}
 
 recon.reconTypes["MiG-21Bis"] = true		--simulates "D" variant Day Recce pod with AShAFA-5
-recon.reconTypes["AJS37"] = true
+recon.reconTypes["AJS37"] = true		--simulate SKa 24C low altitude nose camera 
 recon.reconTypes["Mirage-F1CE"] = true		--simulate recon nose with omera 40 panoramic camera
 recon.reconTypes["Mirage-F1EE"] = true		--simulate recon nose with omera 40 panoramic camera
 recon.reconTypes["L-39ZA"] = true		--simulates PFK-5 recce pod with AFA-39 camera
