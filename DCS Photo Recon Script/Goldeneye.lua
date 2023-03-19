@@ -34,10 +34,10 @@ recon.parameters["MiG-21Bis"].minAlt 		= 1600
 recon.parameters["MiG-21Bis"].maxAlt 		= 16400
 recon.parameters["MiG-21Bis"].maxRoll		= 10
 recon.parameters["MiG-21Bis"].maxPitch		= 15
-recon.parameters["MiG-21Bis"].fov		= 27
+recon.parameters["MiG-21Bis"].fov		= 52
 recon.parameters["MiG-21Bis"].duration		= 140
 recon.parameters["MiG-21Bis"].offset		= math.rad(10)
-recon.parameters["MiG-21Bis"].name		= "MiG-21R"
+recon.parameters["MiG-21Bis"].name		= "MiG-21R with Day recce pod"
 
 recon.parameters["AJS37"] = {}
 recon.parameters["AJS37"].minAlt 		= 50
@@ -57,7 +57,7 @@ recon.parameters["Mirage-F1CE"].maxPitch	= 15
 recon.parameters["Mirage-F1CE"].fov		= 20
 recon.parameters["Mirage-F1CE"].duration	= 588
 recon.parameters["Mirage-F1CE"].offset		= math.rad(10)
-recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR"
+recon.parameters["Mirage-F1CE"].name		= "Mirage-F1CR with Omera 33"
 
 recon.parameters["Mirage-F1EE"] = {}
 recon.parameters["Mirage-F1EE"].minAlt 		= 100
@@ -67,7 +67,7 @@ recon.parameters["Mirage-F1EE"].maxPitch	= 15
 recon.parameters["Mirage-F1EE"].fov		= 85
 recon.parameters["Mirage-F1EE"].duration	= 252
 recon.parameters["Mirage-F1EE"].offset		= math.rad(10)
-recon.parameters["Mirage-F1EE"].name		= "Mirage-F1CR"
+recon.parameters["Mirage-F1EE"].name		= "Mirage-F1CR with Omera 40"
 
 recon.parameters["L-39ZA"] = {}
 recon.parameters["L-39ZA"].minAlt 		= 1600
@@ -77,7 +77,7 @@ recon.parameters["L-39ZA"].maxPitch		= 15
 recon.parameters["L-39ZA"].fov			= 30
 recon.parameters["L-39ZA"].duration		= 140
 recon.parameters["L-39ZA"].offset		= math.rad(70)
-recon.parameters["L-39ZA"].name			= "L-39ZA Recon"
+recon.parameters["L-39ZA"].name			= "L-39ZA with Pfk-5 recce pod"
 
 recon.parameters["F-5E-3"] = {}
 recon.parameters["F-5E-3"].minAlt 		= 2500
@@ -117,7 +117,7 @@ recon.parameters["MB-339A"].maxPitch		= 15
 recon.parameters["MB-339A"].fov			= 25
 recon.parameters["MB-339A"].duration		= 350
 recon.parameters["MB-339A"].offset		= math.rad(80)
-recon.parameters["MB-339A"].name		= "MB-339A Photo-recon"
+recon.parameters["MB-339A"].name		= "MB-339A with F-95 Recon pod"
 
 recon.parameters["F-16C_50"] = {}
 recon.parameters["F-16C_50"].minAlt 		= 1000
@@ -127,7 +127,7 @@ recon.parameters["F-16C_50"].maxPitch		= 20
 recon.parameters["F-16C_50"].fov		= 60
 recon.parameters["F-16C_50"].duration		= 600
 recon.parameters["F-16C_50"].offset		= math.rad(10)
-recon.parameters["F-16C_50"].name		= "F16C DB-101"
+recon.parameters["F-16C_50"].name		= "F16C with DB-110 Recon pod"
 
 recon.targetExceptions = {}
 recon.targetExceptions["blue supply"] 		= true
