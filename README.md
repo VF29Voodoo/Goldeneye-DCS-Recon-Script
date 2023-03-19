@@ -91,15 +91,16 @@ If you wish to have only military units marked you can remove the detection of s
 
 |Aircraft|MinAlt|MaxAlt|MaxRoll|MaxPitch|FOV|Film duration|Offset|POD/Camera|Optimal mission profil|
 |:------:|:----:|:----:|:-----:|:------:|:-:|:-----------:|:----:|:----:|:----:|
-|MIG-21  |1600ft |16400ft|10°     |15°     |104°|140sec        |90°   |Day Recce pod with AShAFA-5|Low Altitude / Area Research|
-|AJS-37  |100ft |4000ft|10°     |15°     |90°|180sec        |60°   | SKa24 nose camera |Low Altitude|
-|Mirage F1  |100ft |5000ft|10°     |15°     |80°|280sec        |90°   |Omera 40 panoramic camera|Low Altitude / Area Research|
-|L-39ZA |1600ft |16400ft|8°     |15°     |61°|140sec        |70°   |PFK-5 recce pod with AFA-39 camera|Medium Altitude / Axis Recon|
-|F-5E  |2500ft |25000ft|15°     |15°     |60°|65sec        |70°   |KA-95 "Tigereye" nose recon camera|High Altitude / Known target|
-|F-14A  |750ft |5000ft|10°     |20°     |41°|400sec        |85°   |KS-87D camera|Low Altitude / Axis Recon|
-|F-14B |500ft |25000ft|10°     |20°     |90°|80sec        |90°   |KA-99A panoramic camera|High Altitude / Known target|
-|MB-339A  |50ft |5000ft|8°     |15°     |90°|350sec        |80°   |F-95 recon pod|Low Altitude / Area Research|
-|F-16C |10000ft |80000ft|30°     |20°     |40°|600sec        |90°   |DB-110 recon pod|High Altitude / Area Research|
+|MIG-21  |1600ft |16400ft|10°     |15°     |104°|140sec        |80° Below the nose |Day Recce pod with AShAFA-5|Low Altitude / Area Research|
+|AJS-37  |100ft |5000ft|10°     |15°     |50°|120sec        |80° Below the nose | SKa24 nose camera |Low Altitude|
+|Mirage F1CE|5000ft |15000ft|10°     |15°     |40°|588sec        |80° Below the nose |Omera 33 Vertical camera|Medium Altitude|
+|Mirage F1EE|100ft |5000ft|10°     |15°     |170°|252sec        |80° Below the nose |Omera 40 panoramic camera|Low Altitude / Area Research|
+|L-39ZA |1600ft |16400ft|8°     |15°     |61°|140sec        |20° Below the nose |PFK-5 recce pod with AFA-39 camera|Medium Altitude / Axis Recon|
+|F-5E  |2500ft |25000ft|15°     |15°     |140°|300sec       |50° Below the nose  |KA-95 "Tigereye" nose recon camera|Medium to High Altitude /Area research|
+|F-14A  |750ft |5000ft|10°     |20°     |28°|400sec        |45° Below the nose |KS-87D camera|Low Altitude / Axis Recon|
+|F-14B |500ft |25000ft|10°     |20°     |170°|80sec        |80° Below the nose  |KA-99A panoramic camera|High Altitude / Area research|
+|MB-339A  |50ft |5000ft|8°     |15°     |50°|350sec        |10° Below the nose  |F-95 recon pod|Low Altitude / Axis Recon|
+|F-16C |1000ft |20000ft|30°     |20°     |120°|600sec        |80° Below the nose  |DB-110 recon pod|High Altitude / Area Research|
 
 # What's next:
 
