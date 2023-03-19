@@ -604,7 +604,7 @@ function recon.findTargets(instance) --finds targets based on type of aircraft a
 	if altitude > minAlt and altitude < maxAlt and isFlat then --within altitude parameters and not rolling/pitching excessively
 		world.searchObjects(Object.Category.UNIT , volume , ifFound)
 		world.searchObjects(Object.Category.STATIC , volume , ifFound)
-		--world.searchObjects(Object.Category.SCENERY , volume , ifFound)
+		world.searchObjects(Object.Category.SCENERY , volume , ifFound)
 		--trigger.action.circleToAll(-1 , math.random(8000,10000) , volume.params.point , volume.params.radius ,  {1, 0, 0, 1} , {1, 0, 0, 0.5} , 0 , false, tostring(altitude))
 		return targetList
 	end
