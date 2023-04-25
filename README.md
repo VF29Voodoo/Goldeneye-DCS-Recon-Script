@@ -102,6 +102,22 @@ If you wish to have only military units marked you can remove the detection of s
 |MB-339A  |50ft |5000ft|8°     |15°     |50°|350sec        |10° Below the nose  |F-95 recon pod|Low Altitude / Axis Recon|
 |F-16C |1000ft |20000ft|30°     |20°     |120°|600sec        |80° Below the nose  |DB-110 recon pod|High Altitude / Area Research|
 
+# Documents to help the use of the script:
+
+We have produced several documents to help you use the script.
+
+The first one is an excel file on which you can find all the parameters of all the devices and calculations of covered area and shooting distance.
+
+This will help you to plan your mission and to know better what area you can cover. Suggestions for use are also made because not all cameras are suitable for research in large areas for example.
+
+You can download this document at the following link: [Photo Recon Chart](https://github.com/users/VF29Voodoo/projects/1/views/1](https://docs.google.com/spreadsheets/d/1O4mlTNnxhqH-9jlsOn0tQSO06IQyZHRR?rtpof=true&authuser=remitranchat%40yahoo.fr&usp=drive_fs)
+
+A second one can be used to report on your squadron's reconnaissance flights and help them perform strikes or share the information gathered.
+
+You can find an example here : [Recon Mission Report][https://github.com/Yink059/DCS-Scripts/blob/main/recon.lua](https://drive.google.com/open?id=1O6n2VKpQ1Umou7qOYaRP6ox9nU6sS9JD&authuser=remitranchat%40yahoo.fr&usp=drive_fs)
+
+You can download the original document here: [Empty Recon Mission Report](https://github.com/Yink059/DCS-Scripts/blob/main/recon.lua](https://docs.google.com/document/d/1mZdKuyz8m8l0yeysbkYvCsUPmyVYp9Xg/edit?usp=sharing&ouid=115426391592461594522&rtpof=true&sd=true)
+
 # What's next:
 
 You can access the road map here : [Photo Recon Script Project](https://github.com/users/VF29Voodoo/projects/1/views/1)
