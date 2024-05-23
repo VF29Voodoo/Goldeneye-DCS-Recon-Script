@@ -16,6 +16,7 @@ recon.reconTypes["F-14A-135-GR"] = true		--simulates KS-87D camera
 recon.reconTypes["F-14B"] = true		--simulates KA-99A panoramic camera
 recon.reconTypes["MB-339A"] = true		--simulate F-95 recon pod
 recon.reconTypes["F-16C_50"] = true		--simulate DB-110 recon pod
+recon.reconTypes["F-4E-45MC"] = true		--simulate KS-87 Forward Oblique Camera
 
 recon.helicopters = {}
 
@@ -29,6 +30,17 @@ recon.detectedTargets = {}
 recon.detectedTargetsLife = {}
 
 recon.parameters = {}
+recon.parameters = {}
+recon.parameters["F-4E-45MC"] = {}
+recon.parameters["F-4E-45MC"].minAlt 		= 100
+recon.parameters["F-4E-45MC"].maxAlt 		= 6096
+recon.parameters["F-4E-45MC"].maxRoll		= 10
+recon.parameters["F-4E-45MC"].maxPitch		= 15
+recon.parameters["F-4E-45MC"].fov			= 23
+recon.parameters["F-4E-45MC"].duration		= 120
+recon.parameters["F-4E-45MC"].offset		= math.rad(60)
+recon.parameters["F-4E-45MC"].name			= "RF-4E with KS-87 Forward Oblique Camera"
+
 recon.parameters["MiG-21Bis"] = {}
 recon.parameters["MiG-21Bis"].minAlt 		= 500
 recon.parameters["MiG-21Bis"].maxAlt 		= 5000
