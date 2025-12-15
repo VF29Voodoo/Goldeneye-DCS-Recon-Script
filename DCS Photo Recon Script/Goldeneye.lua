@@ -17,6 +17,7 @@ recon.reconTypes["F-14B"] = true		--simulates KA-99A panoramic camera
 recon.reconTypes["MB-339A"] = true		--simulate F-95 recon pod
 recon.reconTypes["F-16C_50"] = true		--simulate DB-110 recon pod
 recon.reconTypes["F-4E-45MC"] = true		--simulate KS-87 Forward Oblique Camera
+recon.reconTypes["F/A-18C"] = true		--simulate F/A18-D with ATARS camera
 
 recon.helicopters = {}
 
@@ -140,6 +141,16 @@ recon.parameters["F-16C_50"].fov		= 60
 recon.parameters["F-16C_50"].duration		= 600
 recon.parameters["F-16C_50"].offset		= math.rad(10)
 recon.parameters["F-16C_50"].name		= "F16C with DB-110 Recon pod"
+
+recon.parameters["F/A-18C"] = {}
+recon.parameters["F/A-18C"].minAlt 		= 200
+recon.parameters["F/A-18C"].maxAlt 		= 3000
+recon.parameters["F/A-18C"].maxRoll		= 30
+recon.parameters["F/A-18C"].maxPitch		= 20
+recon.parameters["F/A-18C"].fov		= 138
+recon.parameters["F/A-18C"].duration		= 60*45 -- supposedly 45 minutes of ATARS data can be recorded
+recon.parameters["F/A-18C"].offset		= math.rad(10) --unsure
+recon.parameters["F/A-18C"].name		= "F/A-18D with ATARS equipment"
 
 recon.targetExceptions = {}
 recon.targetExceptions["blue supply"] 		= true
